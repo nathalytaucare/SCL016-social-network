@@ -41,19 +41,22 @@
     </div>
     <div class="log-in">
       <div class="user-log-in">
-        <h3 class="e-mail">Correo Electrónico</h3>
-        <input type="text" class="your-mail">
-        <h3 class="user-password">Contraseña</h3>
-        <input type="password" class="your-password"><br>
-        <label class="remember"><input type="checkbox" value="first_checkbox">Recordar nombre de usuario</label><br>
-        <button class="log-in-btn">INICIAR SESIÓN</button>
+        <form id="login-form">
+          <h3 class="e-mail">Correo Electrónico</h3>
+          <input type="text" class="your-email" id="your-email">
+          <h3 class="user-password">Contraseña</h3>
+          <input type="password" class="your-password" id="your-password"><br>
+          <label class="remember"><input type="checkbox" value="first_checkbox">Recordar nombre de usuario</label><br>
+          <button type="submit" class="log-in-btn">INICIAR SESIÓN</button>
+          <br>
+          <button type="button" class="facebook-btn" id="facebookLogin">
+            <img class="facebook-logo" src="https://i.ibb.co/4FW3WXz/Facebook-icon-2013-1.png" alt="">
+          </button><br>
+          <button type="button" class="google-btn" id="googleLogin">
+            <img class="google-logo" src="https://i.ibb.co/XZcxN1F/google.png" alt="">
+          </button>
+        </form>
       </div>
-      <button class="facebook-btn">
-        <img class="facebook-logo" src="https://ibb.co/Jrm3d3c.png" alt="">
-      </button><br>
-      <button class="google-btn">
-        <img class="google-logo" src="https://ibb.co/Xshy1Lj.png" alt="">
-      </button>
       <p class="forget-user">¿Olvidaste tu nombre de usuario o contraseña?</p>
       <p class="registration-link">Si no has creado tu cuenta, registrate AQUÍ</p>
     </div>
@@ -67,18 +70,20 @@
     </div>
     <p class="personal-info">INGRESA TUS DATOS</p>
     <div class="registration-container">
-      <h3 class="full-name">Nombre Completo</h2>
-        <input type="text" class="write-name">
-        <h3 class="date-birth">Fecha de nacimiento</h3>
-        <input type="date" class="write-date">
+      <form id="signup-form">
+        <!--<h3 class="full-name">Nombre Completo</h2>
+          <input type="text" class="write-name">
+          <h3 class="date-birth">Fecha de nacimiento</h3>
+          <input type="date" class="write-date"> -->
         <h3 class="e-mail-adress">Correo electrónico</h3>
-        <input type="text" class="write-e-mail">
+        <input type="text" class="write-e-mail" id="write-e-mail">
         <h3 class="password">Contraseña</h3>
-        <input type="password" class="write-password">
-        <h3 class="password">Repetir contraseña</h3>
-        <input type="password" class="repeat-password">
+        <input type="password" class="write-password" id="write-password">
+        <!--<h3 class="password">Repetir contraseña</h3>
+          <input type="password" class="repeat-password">-->
+        <button type="submit" class="register-btn">REGISTRARSE</button>
+      </form>
     </div>
-    <button class="register-btn">REGISTRARSE</button>
   </div>
 
   <!-- Fourth Page -->
@@ -91,7 +96,39 @@
     <h2 class="fourth-title">ANIMES y MANGAS favoritos<br>(máximo 8)</h2>
   </div>
   <script type="module" src="main.js"></script>
+<<<<<<< HEAD
   
+=======
+
+  <!-- Firebase scripts-->
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-firestore.js"></script>
+
+  <script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+      apiKey: "AIzaSyDjR4142j6cUVsRyDqwCtuxD62c5E8tmFc",
+      authDomain: "red-social-e15d9.firebaseapp.com",
+      projectId: "red-social-e15d9",
+      storageBucket: "red-social-e15d9.appspot.com",
+      messagingSenderId: "159044500115",
+      appId: "1:159044500115:web:4ddcc830cab6450b482b66",
+      measurementId: "G-RKNH8XW2RC"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+    const auth = firebase.auth();
+    const fs = firebase.firestore();
+  </script>
+>>>>>>> 1a5feb29321d858082c707560356f52c94283f3b
 
 </body>
 

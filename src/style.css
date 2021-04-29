@@ -93,6 +93,7 @@
 }
 
 .fourth-page {
+    /*display: none;*/
     background: linear-gradient(to bottom, #6A6C8A, #262736);
 }
 

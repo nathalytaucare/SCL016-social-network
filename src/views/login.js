@@ -1,8 +1,8 @@
 export default () => {
-    const container = document.createElement("div");
-    container.setAttribute("class", "second-page");
+  const container = document.createElement('div');
+  container.setAttribute('class', 'second-page');
 
-    container.innerHTML = `
+  container.innerHTML = `
     <div class="second-logo-container">
         <img src="https://i.ibb.co/47JxNMV/animeki-second-logo.png" alt="">
     </div>
@@ -27,7 +27,7 @@ export default () => {
     <p class="forget-user">¿Olvidaste tu nombre de usuario o contraseña?</p>
     <p class="registration-link">Si no has creado tu cuenta, registrate AQUÍ</p>
   </div>
-    `
-    
-    return container;
-}
+    `;
+
+  return container;
+};

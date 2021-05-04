@@ -25,7 +25,7 @@ export default () => {
             </form>
         </div>  
     <p class="forget-user">¿Olvidaste tu nombre de usuario o contraseña?</p>
-    <p class="registration-link">Si no has creado tu cuenta, registrate AQUÍ</p>
+    <p class="registration-link">Si no has creado tu cuenta, registrate <a href="#/signup" id="link">AQUÍ</a></p>
   </div>
     `;
 

@@ -1,7 +1,7 @@
 export default () => {
-    const wall = document.createElement("div");
-    wall.setAttribute("class", "wall-page");
-    wall.innerHTML = `
+  const wall = document.createElement('div');
+  wall.setAttribute('class', 'wall-page');
+  wall.innerHTML = `
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color:#5F5F5F;">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Home</a>
@@ -25,13 +25,24 @@ export default () => {
         </div>
     </nav>
 
-    <form style="width: 18rem; border-color= #eeeeee" >
-        <div class="form-group">
-            <label for="exampleFormControlTextarea1">Post</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Post here..."></textarea>
+    <div class="container p-4">
+    <div class="row">
+      <div class="col-md-4 offset-md-4">
+        <div class="card">
+          <div class="card-body">
+            <form id="post-form">
+              <div class="form-group">
+                <textarea id="post" rows="3" class="form-control" placeholder="Post here..."></textarea>
+              </div>
+              <button class="btn btn-primary" id="btn save-form">
+                Post it
+              </button>
+            </form>
+          </div>
         </div>
-        <button class="btn btn-primary">To post</button>
-    </form>
+      </div>
+    </div>
+  </div>
     `
-    return wall;
-}
+  return wall;
+};

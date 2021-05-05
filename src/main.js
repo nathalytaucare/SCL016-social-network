@@ -6,6 +6,7 @@
 // myFunction();
 
 import { routes } from './routes.js';
+import postForm from "./lib/index.js";
 
 const url=()=>{
     // const url = window.location.hash;
@@ -128,5 +129,7 @@ window.addEventListener("popstate",()=>{
 const wall=()=>{
     console.log("entro wall");
     history.pushState(null, 'wall', '#/wall');
-    url();   
+    url();
+    postForm();   
 };
+

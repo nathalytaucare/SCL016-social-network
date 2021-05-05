@@ -25,7 +25,7 @@ export default () => {
         </div>
     </nav>
 
-    <div class="container p-4">
+   <div class="container p-4">
     <div class="row">
       <div class="col-md-4 offset-md-4">
         <div class="card">
@@ -42,7 +42,13 @@ export default () => {
         </div>
       </div>
     </div>
-  </div>
+  <div class= "container p-4">  
+    <div class="row">
+      <div class="col-md-4 offset-md-4" id="post-container">
+      </div>
+    </div>
+  </div>  
+  
     `
   return wall;
 };

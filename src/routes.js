@@ -2,7 +2,7 @@ import Home from "../views/home.js"
 import Login from "../views/login.js"
 import Signup from "../views/signup.js"
 import Selection from "../views/selection.js"
-import Wall from "../views/Wall.js"
+import Wall from "../views/wall.js"
 
 const firstPage = document.getElementById('first-page');
 

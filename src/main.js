@@ -59,9 +59,9 @@ const loginPage=()=>{
     toContinue.addEventListener('click', () => {
 
         history.pushState(null, 'login', '#/login');
-
+        console.log("click");
         url();
-
+        console.log("url");
         // //Login
         const loginForm = document.querySelector('#login-form');
         loginForm.addEventListener('submit', (e) => {
@@ -122,14 +122,23 @@ const loginPage=()=>{
 firstPage();
 loginPage();
 
+
+
 window.addEventListener("popstate",()=>{
     url();
 })
 
-const wall=()=>{
+const wall=async()=>{
     console.log("entro wall");
     history.pushState(null, 'wall', '#/wall');
     url();
-    postForm();   
+    postForm(); 
+    const db = firebase.firestore();
+    const getPosts = () => db.collection("posts").get();
+    const querySnapshot = await getPosts();
+    querySnapshot.forEach(doc => {
+    return console.log(doc.data());
+    })
+    
 };
 

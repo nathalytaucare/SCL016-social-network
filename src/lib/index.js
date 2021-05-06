@@ -51,7 +51,7 @@ export default () => {
                      </div>
                     <div>
                          <button class="btn btn-primary btn-delete" id="${post.id}">
-                             Delete
+                             Delete!
                         </button>
                         <button class="btn btn-primary btn-edit" id="${post.id}">
                             Edit

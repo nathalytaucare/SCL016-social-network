@@ -133,12 +133,12 @@ const wall=async()=>{
     history.pushState(null, 'wall', '#/wall');
     url();
     postForm(); 
-    const db = firebase.firestore();
-    const getPosts = () => db.collection("posts").get();
-    const querySnapshot = await getPosts();
-    querySnapshot.forEach(doc => {
-    return console.log(doc.data());
-    })
+    // const db = firebase.firestore();
+    // const getPosts = () => db.collection("posts").get();
+    // const querySnapshot = await getPosts();
+    // querySnapshot.forEach(doc => {
+    // return console.log(doc.data());
+    // })
     
 };
 

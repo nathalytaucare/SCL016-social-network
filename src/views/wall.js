@@ -34,9 +34,9 @@ export default () => {
               <div class="form-group">
                 <textarea id="post" rows="3" class="form-control" placeholder="Post here..."></textarea>
               </div>
-              <button class="btn btn-primary" id="btn save-form">
-                Post it
-              </button>
+                <button class="btn btn-primary" id="btn save-form">
+                  Post it
+                </button>
             </form>
           </div>
         </div>
@@ -48,6 +48,7 @@ export default () => {
       </div>
     </div>
   </div>  
+
   
     `
   return wall;

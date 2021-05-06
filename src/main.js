@@ -121,9 +121,9 @@ const loginPage=()=>{
 firstPage();
 loginPage();
 
-window.addEventListener("popstate",()=>{
-    url();
-})
+// window.addEventListener("popstate",()=>{
+//     url();
+// })
 
 const wall=()=>{
     console.log("entro wall");

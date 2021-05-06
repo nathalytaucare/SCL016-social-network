@@ -10,12 +10,14 @@ const db = firebase.firestore();
 export default () => {
     const postForm = document.getElementById("post-form");
     const postContainer = document.getElementById("post-container");
+    const updatePost = (id, updatedPost) =>  db.collection("posts").doc(id).update(updatedPost);
 
     let editStatus = false;
     let id = "";
 
     const getPosts = () => db.collection("posts").get();
     const getPost = (id) => db.collection("posts").doc(id).get();
+    
 
     postForm.addEventListener("submit", async (e) => {
         e.preventDefault();
@@ -33,7 +35,7 @@ export default () => {
         postForm.reset();
         const onGetPosts = (callback) => db.collection("posts").onSnapshot(callback);
         const deletePosts = (id) =>db.collection ("posts").doc(id).delete();
-        const updatePost = (id, updatedPost) =>  db.collection("posts").doc(id).update(updatedPost);
+        
            
         // const querySnapshot = await getPosts();
         onGetPosts((querySnapshot) => {

@@ -4,9 +4,10 @@
 // import { myFunction } from './lib/index.js';
 
 // myFunction();
-
+import { auth } from './firebase.js'
 import { routes } from './routes.js'
-import postForm from './lib/index.js'
+import index from './lib/index.js'
+
 
 const url = () => {
   // const url = window.location.hash;
@@ -121,5 +122,5 @@ const wall = async () => {
   console.log('entro wall')
   history.pushState(null, 'wall', '#/wall')
   url()
-  postForm()
+  index()
 }

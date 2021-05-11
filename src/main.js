@@ -8,6 +8,7 @@ import { auth } from './firebase.js'
 import { routes } from './routes.js'
 import index from './lib/index.js'
 
+
 const url = () => {
   // const url = window.location.hash;
   routes(window.location.hash)
@@ -57,6 +58,7 @@ const loginPage = () => {
     console.log('click')
     url()
     console.log('url')
+
     // //Login
     const loginForm = document.querySelector('#login-form')
     loginForm.addEventListener('submit', (e) => {

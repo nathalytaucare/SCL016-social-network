@@ -1,10 +1,11 @@
+
 import { db } from '../firebase.js'
-// const db = firebase.firestore()
 
 export default () => {
   const postForm = document.getElementById('post-form')
   const postContainer = document.getElementById('post-container')
   const updatePost = (id, updatedPost) => db.collection('posts').doc(id).update(updatedPost)
+
   let editStatus = false
   let id = ''
   let contador = 0
@@ -45,6 +46,7 @@ export default () => {
 
       postContainer.innerHTML += `
                 <div class="my-posts card mt-5">
+
                     <div class="card-body mt-2 border-primary">
                          ${post.postIt}
                      </div>
@@ -65,11 +67,13 @@ export default () => {
                 `
       const btnsDelete = document.querySelectorAll('.btn-delete')
       btnsDelete.forEach(btn => {
+        
         btn.addEventListener('click', async (e) => {
           await deletePosts(e.target.id)
         })
       })
       const btnsEdit = document.querySelectorAll('.btn-edit')
+
       btnsEdit.forEach(btn => {
         btn.addEventListener('click', async (e) => {
           const doc = await getPost(e.target.id)

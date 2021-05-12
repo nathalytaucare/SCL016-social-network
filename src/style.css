@@ -51,7 +51,7 @@
 
 .e-mail, .user-password {
     color: #09D1E1;
-    font-family: Roboto;
+    font-family: Roboto,'Times New Roman', Times, serif;
 }
 
 .registration-link, .remember, .personal-info {
@@ -82,7 +82,7 @@
 }
 
 .write-name, .write-date, .write-e-mail, .write-password, .repeat-password {
-    border-radius: 5px;;
+    border-radius: 5px;
 }
 
 .register-btn {

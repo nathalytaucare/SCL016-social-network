@@ -1,7 +1,16 @@
+/* eslint-disable no-undef */
 
 import { db } from '../firebase.js'
 
-export default () => {
+export const savePost = (postIt, contador) => {
+  contador = 0
+  firebase.firestore().collection('posts').doc().set({
+    postIt,
+    contador
+  })
+}
+
+export const DoPost = () => {
   const postForm = document.getElementById('post-form')
   const postContainer = document.getElementById('post-container')
   const updatePost = (id, updatedPost) => db.collection('posts').doc(id).update(updatedPost)
@@ -10,14 +19,6 @@ export default () => {
   let id = ''
   let contador = 0
   const getPost = (id) => db.collection('posts').doc(id).get()
-
-  const savePost = (postIt, contador) => {
-    contador = 0
-    db.collection('posts').doc().set({
-      postIt,
-      contador
-    })
-  }
 
   postForm.addEventListener('submit', async (e) => {
     e.preventDefault()
@@ -67,7 +68,6 @@ export default () => {
                 `
       const btnsDelete = document.querySelectorAll('.btn-delete')
       btnsDelete.forEach(btn => {
-        
         btn.addEventListener('click', async (e) => {
           await deletePosts(e.target.id)
         })

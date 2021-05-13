@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-import { savePost } from '../src/lib/index.js'
+import { savePost } from '../lib/index.js'
 
 export const DoPost = () => {
   const postForm = document.getElementById('post-form')
@@ -50,10 +50,8 @@ export const DoPost = () => {
                             Edit
                         </button>
                         <button class="btn btn-primary btn-like" id="${post.id}">
-                            Like
+                            Likes ${post.contador}
                         </button>
-                        <textarea  cols="1" rows="1"> ${post.contador}</textarea>
-
                     </div>
                 </div>
                 `

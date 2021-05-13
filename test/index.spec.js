@@ -1,4 +1,3 @@
-/* eslint-disable import/first */
 /* eslint-disable no-undef */
 // import MockFirebase from '../_mocks_/firebase-mock.js'
 // global.firebase = MockFirebase()
@@ -9,10 +8,10 @@ const fixtureData = {
     pots: {
       __doc__: {
         abc123: {
-          title: 'terminar la pildora'
+          postIt: 'terminar la pildora'
         },
         abc125: {
-          title: 'comprar trufas'
+          postIt: 'comprar trufas'
         }
       }
     }
@@ -21,13 +20,14 @@ const fixtureData = {
 
 global.firebase = new MockFirebase(fixtureData, { isNaiveSnapshotListenerEnabled: true })
 
-import { savePost } from '../src/lib/index'
-
+// eslint-disable-next-line import/first
+import { savePost } from '../src/lib/index.js'
+console.log(savePost())
 describe('save', () => {
   it('Deberia poder agregar un post', () => {
     return savePost('hola').then((data) => {
       console.log(data)
-      expect(data.postIt).toBe('hola')
+      expect(data).toBe('hola')
     })
   })
 })

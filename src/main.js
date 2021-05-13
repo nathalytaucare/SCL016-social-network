@@ -7,7 +7,7 @@
 // myFunction();
 import { auth } from './firebase.js'
 import { routes } from './routes.js'
-import { DoPost } from './lib/index.js'
+import { DoPost } from '../src/wallView.js'
 
 const url = () => {
   // const url = window.location.hash;

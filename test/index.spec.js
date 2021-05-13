@@ -1,6 +1,8 @@
+import MockFirebase from 'mock-cloud-firestore'
+global.firebase = new MockFirebase(fixtureData)
 /* eslint-disable no-undef */
-import MockFirebase from '../_mocks_/firebase-mock.js'
-global.firebase = MockFirebase()
+// import MockFirebase from '../_mocks_/firebase-mock.js'
+// global.firebase = MockFirebase()
 // eslint-disable-next-line import/first
 import { savePost } from '../src/lib/index'
 

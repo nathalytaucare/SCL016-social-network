@@ -10,7 +10,6 @@ import { routes } from './routes.js'
 import { DoPost } from '../lib/wallView.js'
 import { auth } from './firebase.js'
 
-
 const url = () => {
   // const url = window.location.hash;
   routes(window.location.hash)
